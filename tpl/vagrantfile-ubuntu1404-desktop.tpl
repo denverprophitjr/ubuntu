@@ -16,6 +16,8 @@ Vagrant.configure("2") do |config|
         v.customize ["modifyvm", :id, "--rtcuseutc", "on"]
         v.customize ["modifyvm", :id, "--accelerate3d", "on"]
         v.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+        v.customize ["modifyvm", :id, "--audio", "none"]
+        v.customize ["modifyvm", :id, "--draganddrop", "hosttoguest"]
     end
 
     ["vmware_fusion", "vmware_workstation"].each do |provider|
